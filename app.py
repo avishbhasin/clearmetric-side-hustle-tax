@@ -128,32 +128,33 @@ st.markdown("---")
 # ---------------------------------------------------------------------------
 with st.sidebar:
     st.markdown("## Your Numbers")
+    st.button("🔄 Update Results", use_container_width=True)
 
     st.markdown("### Filing & Income")
     filing_status = st.selectbox(
         "Filing Status",
         ["Single", "Married Filing Jointly", "Head of Household"],
     )
-    w2_salary = st.number_input("W-2 Salary from Day Job ($)", value=75_000, min_value=0, step=5_000, format="%d")
-    side_gross = st.number_input("Side Hustle Gross Income ($)", value=25_000, min_value=0, step=1_000, format="%d")
+    w2_salary = st.number_input("W-2 Salary from Day Job ($)", value=75_000, min_value=0, step=5_000)
+    side_gross = st.number_input("Side Hustle Gross Income ($)", value=25_000, min_value=0, step=1_000)
 
     st.markdown("### Side Hustle Expenses (Deductible)")
-    exp_supplies = st.number_input("Supplies/Materials ($)", value=2_000, min_value=0, step=500, format="%d")
-    exp_software = st.number_input("Software/Tools ($)", value=500, min_value=0, step=100, format="%d")
-    exp_home_office = st.number_input("Home Office ($)", value=1_500, min_value=0, step=500, format="%d",
+    exp_supplies = st.number_input("Supplies/Materials ($)", value=2_000, min_value=0, step=500)
+    exp_software = st.number_input("Software/Tools ($)", value=500, min_value=0, step=100)
+    exp_home_office = st.number_input("Home Office ($)", value=1_500, min_value=0, step=500,
                                      help="$5/sqft simplified option")
-    exp_vehicle = st.number_input("Vehicle/Mileage ($)", value=1_000, min_value=0, step=100, format="%d")
-    exp_marketing = st.number_input("Marketing/Advertising ($)", value=500, min_value=0, step=100, format="%d")
-    exp_other = st.number_input("Other Deductible Expenses ($)", value=500, min_value=0, step=100, format="%d")
+    exp_vehicle = st.number_input("Vehicle/Mileage ($)", value=1_000, min_value=0, step=100)
+    exp_marketing = st.number_input("Marketing/Advertising ($)", value=500, min_value=0, step=100)
+    exp_other = st.number_input("Other Deductible Expenses ($)", value=500, min_value=0, step=100)
 
     st.markdown("### Deductions & State")
     use_standard = st.toggle("Standard Deduction", value=True, help="Toggle off for itemized")
     if not use_standard:
-        itemized_deduction = st.number_input("Itemized Deduction ($)", value=20_000, min_value=0, step=1000, format="%d")
+        itemized_deduction = st.number_input("Itemized Deduction ($)", value=20_000, min_value=0, step=1000)
     else:
         itemized_deduction = 0
     state = st.selectbox("State", list(STATE_TAX_RATES.keys()), index=list(STATE_TAX_RATES.keys()).index("California"))
-    quarterly_paid = st.number_input("Quarterly Estimated Payments Already Made ($)", value=0, min_value=0, step=500, format="%d")
+    quarterly_paid = st.number_input("Quarterly Estimated Payments Already Made ($)", value=0, min_value=0, step=500)
 
 # ---------------------------------------------------------------------------
 # Calculations
@@ -313,7 +314,7 @@ st.markdown("---")
 # ---------------------------------------------------------------------------
 st.markdown("## Real Hourly Rate Calculator")
 
-hours_worked = st.number_input("Hours worked on side hustle", value=500, min_value=0, step=50, format="%d")
+hours_worked = st.number_input("Hours worked on side hustle", value=500, min_value=0, step=50)
 if hours_worked > 0:
     after_tax_hourly = side_take_home / hours_worked
     st.metric("After-Tax Hourly Rate", f"${after_tax_hourly:,.2f}", f"${side_take_home:,.0f} ÷ {hours_worked} hours")
