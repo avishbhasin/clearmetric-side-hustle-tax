@@ -29,6 +29,34 @@
       }
       @keyframes spin { to { transform: rotate(360deg); } }
     </style>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Side Hustle Tax Estimator",
+      "description": "Free side hustle tax estimator. Calculate self-employment tax, quarterly estimated payments, and deductions for your side income.",
+      "url": "https://avishbhasin.github.io/clearmetric-side-hustle-tax/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free interactive calculator. Premium Excel version available for $11.99"
+      },
+      "author": {
+            "@type": "Organization",
+            "name": "ClearMetric",
+            "url": "https://avishbhasin.github.io/clearmetric/"
+      },
+      "keywords": "side hustle tax, self-employment tax, quarterly taxes, 1099 taxes, gig economy"
+}
+    </script>
+    <link rel="canonical" href="https://avishbhasin.github.io/clearmetric-side-hustle-tax/" />
+    <meta property="og:url" content="https://avishbhasin.github.io/clearmetric-side-hustle-tax/" />
+    <link rel="related" href="https://avishbhasin.github.io/clearmetric-llc-vs-scorp/" title="LLC vs S-Corp Tax Calculator" />
+    <link rel="related" href="https://avishbhasin.github.io/clearmetric-freelance-rate/" title="Freelance Rate Calculator" />
+    <link rel="related" href="https://avishbhasin.github.io/clearmetric-fire-calculator/" title="FIRE Calculator Pro" />
   </head>
   <body>
     <div id="root">
@@ -55,6 +83,17 @@
         },
         document.getElementById("root"),
       );
+    </script>
+    <div id="clearmetric-footer" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;border-top:2px solid #4fc3f7;padding:12px 20px;text-align:center;z-index:9999;font-family:Inter,sans-serif;">
+      <div style="font-size:12px;color:#888;margin-bottom:8px;">More Free Tools from ClearMetric</div>
+      <div><a href="https://avishbhasin.github.io/clearmetric-llc-vs-scorp/" style="color:#4fc3f7;text-decoration:none;padding:8px 16px;border:1px solid #4fc3f7;border-radius:6px;font-size:14px;display:inline-block;margin:4px;">LLC vs S-Corp Tax Calculator</a> <a href="https://avishbhasin.github.io/clearmetric-freelance-rate/" style="color:#4fc3f7;text-decoration:none;padding:8px 16px;border:1px solid #4fc3f7;border-radius:6px;font-size:14px;display:inline-block;margin:4px;">Freelance Rate Calculator</a> <a href="https://avishbhasin.github.io/clearmetric-fire-calculator/" style="color:#4fc3f7;text-decoration:none;padding:8px 16px;border:1px solid #4fc3f7;border-radius:6px;font-size:14px;display:inline-block;margin:4px;">FIRE Calculator Pro</a></div>
+      <div style="margin-top:8px;"><a href="https://clearmetric.gumroad.com/l/side-hustle-tax" style="color:#ffd700;text-decoration:none;font-size:13px;font-weight:600;">Get the Premium Excel Version ($11.99) &rarr;</a></div>
+    </div>
+    <script>
+      setTimeout(function() {
+        var footer = document.getElementById('clearmetric-footer');
+        if (footer) footer.style.display = 'block';
+      }, 20000);
     </script>
   </body>
 </html>
