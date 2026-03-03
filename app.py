@@ -2,7 +2,7 @@
 Side Hustle Tax Estimator — Free Web Tool by ClearMetric
 https://clearmetric.gumroad.com
 
-Helps people with side income (freelance, Etsy, Uber, etc.) estimate their tax liability.
+Helps people with side income (freelance, Etsy, gig work, etc.) estimate their tax liability.
 """
 
 import streamlit as st
@@ -120,7 +120,7 @@ def self_employment_tax(net_profit: float, w2_wages: float) -> float:
 # Header
 # ---------------------------------------------------------------------------
 st.markdown("# 📋 Side Hustle Tax Estimator")
-st.markdown("**Estimate your tax liability** — for freelance, Etsy, Uber, and other side income.")
+st.markdown("**Estimate your tax liability** — for freelance, Etsy, gig work, and other side income.")
 st.markdown("---")
 
 # ---------------------------------------------------------------------------
